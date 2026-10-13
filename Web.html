@@ -1,31 +1,41 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página Web</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        .container {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-    </style>
+    <title>Taller de Programacion</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="container">
-        <h1>¡Hola, mundo!</h1>
-        <p>Este es un párrafo de ejemplo en HTML.</p>
-        <a href="https://google.com" target="_blank">Ir a Google</a>
+        <h1>Registro de Conceptos</h1>
+
+        <form id="formConcepto">
+            <label for="nombre">Nombre del concepto:</label>
+            <input type="text" id="nombre" required>
+
+            <label for="descripcion">Descripción:</label>
+            <textarea id="descripcion" required></textarea>
+
+            <button type="submit">Agregar concepto</button>
+        </form>
+
+        <h2>Conceptos registrados</h2>
+
+        <button type="button" onclick="cargarConceptos()">
+            Mostrar conceptos
+        </button>
+
+        <button type="button" class="eliminar" onclick="eliminarTodos()">
+            Eliminar todos
+        </button>
+
+        <div id="listaConceptos"></div>
     </div>
+
+    <script src="app.js"></script>
 
 </body>
 </html>
